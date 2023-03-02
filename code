@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+struct ogr{
+	char isim[20];
+	char soyIsim[20];
+	int numara;
+	char adres[50];
+};
+int main(int argc, char *argv[]) {
+	struct ogr ogrenciler[5] = {
+		{"Alper Aziz","Paksoy",604,"Istanbul / Bahcelievler"},
+		{"Mehmet","Osmanoglu",1453,"Istanbul / Fatih"},
+		{"Osman","Osmanoglu",1300,"Bursa / Merkez"},
+		{"Vlad","Dracula",1460,"Romanya / Wallachia"},
+		{"Emir","Timur",1345,"Izmir / Merkez"}
+	};
+	int i;
+	for(i=0;i<5;i++){
+		printf("\n");
+		printf("%d. Ogrenci ismi : %s\n",i+1,ogrenciler[i].isim);
+		printf("%d. Ogrenci soy ismi : %s\n",i+1,ogrenciler[i].soyIsim);
+		printf("%d. Ogrenci numarasi : %d\n",i+1,ogrenciler[i].numara);
+		printf("%d. Ogrenci adresi : %s\n",i+1,ogrenciler[i].adres);
+		printf("----------------------------------------------------------------------------------");
+	}
+	return 0;
+}
